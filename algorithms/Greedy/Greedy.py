@@ -42,5 +42,7 @@ class Greedy:
         result_d = result_d + math.sqrt((self.struct[0].get("X") - self.struct[vertex_actual_index].get("X")) ** 2 + (
                     self.struct[0].get("Y") - self.struct[vertex_actual_index].get("Y")) ** 2)
 
-        return round(result_d)
+        result_v.append(result_v[0])
+        result_v = [x - 1 for x in result_v]
+        return result_v, round(result_d)
 
